@@ -1,20 +1,47 @@
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import styles from "./Admin.module.css";
 
 export default function Admin() {
   const navigate = useNavigate();
 
-  const isAdmin = localStorage.getItem("vilange-admin-auth") === "true";
+  const [checkingAuth, setCheckingAuth] = useState(true);
 
-  if (!isAdmin) {
-    navigate("/admin-login");
+  useEffect(() => {
+    const checkAuth = async () => {
+      try {
+        const response = await fetch(
+          "http://localhost/cafe-api/check-auth.php",
+          {
+            credentials: "include",
+          },
+        );
+
+        if (!response.ok) {
+          navigate("/admin-login");
+          return;
+        }
+
+        const data = await response.json();
+
+        if (!data.authenticated) {
+          navigate("/admin-login");
+          return;
+        }
+
+        setCheckingAuth(false);
+      } catch {
+        navigate("/admin-login");
+      }
+    };
+
+    checkAuth();
+  }, [navigate]);
+
+  if (checkingAuth) {
     return null;
   }
-
-  const logout = () => {
-    localStorage.removeItem("vilange-admin-auth");
-    navigate("/admin-login");
-  };
 
   const categories = [
     {
@@ -63,13 +90,23 @@ export default function Admin() {
     },
   ];
 
+  const logout = async () => {
+    try {
+      await fetch("http://localhost/cafe-api/logout.php", {
+        method: "POST",
+        credentials: "include",
+      });
+    } finally {
+      navigate("/admin-login");
+    }
+  };
+
   return (
     <main className={styles.page}>
       <div className={styles.container}>
         <header className={styles.header}>
           <div className={styles.titleBox}>
             <h1>پنل مدیریت ویلانج</h1>
-
             <p>مدیریت محصولات و قیمت‌ها</p>
           </div>
 
@@ -87,7 +124,6 @@ export default function Admin() {
               className={styles.card}
             >
               <span>{category.title}</span>
-
               <span className={styles.arrow}>←</span>
             </button>
           ))}

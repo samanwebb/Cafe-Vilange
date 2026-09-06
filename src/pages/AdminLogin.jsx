@@ -1,22 +1,45 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+import useAdminAuth from "../hooks/useAdminAuth";
+
 import styles from "./AdminLogin.module.css";
 
 export default function AdminLogin() {
   const navigate = useNavigate();
+  const { refreshAuth } = useAdminAuth();
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
+    setError("");
 
-    if (username === "vilange-admin" && password === "Vilange@2026#Cafe") {
-      localStorage.setItem("vilange-admin-auth", "true");
-      navigate("/admin");
-    } else {
-      setError("نام کاربری یا رمز عبور اشتباهه");
+    try {
+      const response = await fetch("http://localhost/cafe-api/login.php", {
+        method: "POST",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username,
+          password,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        await refreshAuth();
+        navigate("/admin");
+      } else {
+        setError(data.message);
+      }
+    } catch {
+      setError("ارتباط با سرور برقرار نشد");
     }
   };
 

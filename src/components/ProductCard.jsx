@@ -1,39 +1,35 @@
 import { useState } from "react";
+
+import { useProducts } from "../context/ProductsContext";
+
+import useAdminAuth from "../hooks/useAdminAuth";
+
 import styles from "./GlobalProduct.module.css";
 
 export default function ProductCard({ item, category }) {
-  const storageKey = `vilange-products-${category}`;
+  const { isAdmin, checking } = useAdminAuth();
 
-  const getSavedProduct = () => {
-    try {
-      const savedProducts = JSON.parse(
-        localStorage.getItem(storageKey) || "[]",
-      );
+  const { products, updateProduct } = useProducts();
 
-      const savedProduct = savedProducts.find(
-        (savedItem) => savedItem.id === item.id,
-      );
+  const serverProduct = products.find(
+    (p) => p.category === category && Number(p.source_id) === Number(item.id),
+  );
 
-      return savedProduct || item;
-    } catch {
-      return item;
-    }
-  };
+  const product = serverProduct
+    ? {
+        ...item,
+        ...serverProduct,
+        englishName: serverProduct.english_name,
+      }
+    : item;
 
-  const [product, setProduct] = useState(getSavedProduct);
   const [isEditing, setIsEditing] = useState(false);
 
-  const isAdmin = localStorage.getItem("vilange-admin-auth") === "true";
-
-  const [form, setForm] = useState(() => {
-    const savedProduct = getSavedProduct();
-
-    return {
-      name: savedProduct?.name || "",
-      englishName: savedProduct?.englishName || "",
-      price: savedProduct?.price || "",
-      ingredients: savedProduct?.ingredients || "",
-    };
+  const [form, setForm] = useState({
+    name: item?.name || "",
+    englishName: item?.englishName || "",
+    price: item?.price || "",
+    ingredients: item?.ingredients || "",
   });
 
   const handleChange = (e) => {
@@ -60,42 +56,45 @@ export default function ProductCard({ item, category }) {
     setIsEditing(true);
   };
 
-  const saveChanges = () => {
+  const saveChanges = async () => {
     if (!isAdmin) {
       setIsEditing(false);
       return;
     }
 
-    const updatedProduct = {
-      ...product,
-      name: form.name,
-      englishName: form.englishName,
-      price: form.price,
-      ingredients: form.ingredients,
-    };
-
     try {
-      const savedProducts = JSON.parse(
-        localStorage.getItem(storageKey) || "[]",
+      const response = await fetch(
+        "http://localhost/cafe-api/update-product.php",
+        {
+          method: "POST",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            id: product.id,
+            name: form.name,
+            englishName: form.englishName,
+            price: form.price,
+            ingredients: form.ingredients,
+          }),
+        },
       );
 
-      const productExists = savedProducts.some(
-        (savedItem) => savedItem.id === product.id,
-      );
+      const data = await response.json();
 
-      let updatedProducts;
-
-      if (productExists) {
-        updatedProducts = savedProducts.map((savedItem) =>
-          savedItem.id === product.id ? updatedProduct : savedItem,
-        );
-      } else {
-        updatedProducts = [...savedProducts, updatedProduct];
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || "خطا در ذخیره محصول");
       }
 
-      localStorage.setItem(storageKey, JSON.stringify(updatedProducts));
+      updateProduct({
+        id: product.id,
+        name: form.name,
+        english_name: form.englishName,
+        price: form.price,
+        ingredients: form.ingredients,
+      });
 
-      setProduct(updatedProduct);
       setIsEditing(false);
     } catch (error) {
       console.error("خطا در ذخیره محصول:", error);
@@ -127,14 +126,14 @@ export default function ProductCard({ item, category }) {
           {product.price ? `${product.price} تومان` : "قیمت ثبت نشده"}
         </strong>
 
-        {isAdmin && (
+        {!checking && isAdmin && (
           <button type="button" onClick={openEdit}>
             ویرایش
           </button>
         )}
       </div>
 
-      {isAdmin && isEditing && (
+      {!checking && isAdmin && isEditing && (
         <div className={styles.editBox}>
           <h4>ویرایش محصول</h4>
 
