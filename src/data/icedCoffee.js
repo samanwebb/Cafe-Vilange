@@ -1,12 +1,12 @@
-import icedLatte from "../assets/images/iced-caffee-caf/iced-latte.png";
-import icedHazelnutLatte from "../assets/images/iced-caffee-caf/iced-hazelnut-latte.png";
-import icedCoconutLatte from "../assets/images/iced-caffee-caf/iced-coconut-latte.png";
-import icedCaramelMacchiato from "../assets/images/iced-caffee-caf/iced-caramel-macchiato.png";
-import icedMocha from "../assets/images/iced-caffee-caf/iced-mocha.png";
-import affogato from "../assets/images/iced-caffee-caf/affogato.png";
-import specialAffogato from "../assets/images/iced-caffee-caf/special-affogato.png";
-import icedAmericano from "../assets/images/iced-caffee-caf/iced-americano.png";
-import orangeAmericano from "../assets/images/iced-caffee-caf/orange-americano.png";
+import icedLatte from "../assets/images-optimized/iced-caffee-caf/iced-latte.webp";
+import icedHazelnutLatte from "../assets/images-optimized/iced-caffee-caf/iced-hazelnut-latte.webp";
+import icedCoconutLatte from "../assets/images-optimized/iced-caffee-caf/iced-coconut-latte.webp";
+import icedCaramelMacchiato from "../assets/images-optimized/iced-caffee-caf/iced-caramel-macchiato.webp";
+import icedMocha from "../assets/images-optimized/iced-caffee-caf/iced-mocha.webp";
+import affogato from "../assets/images-optimized/iced-caffee-caf/affogato.webp";
+import specialAffogato from "../assets/images-optimized/iced-caffee-caf/special-affogato.webp";
+import icedAmericano from "../assets/images-optimized/iced-caffee-caf/iced-americano.webp";
+import orangeAmericano from "../assets/images-optimized/iced-caffee-caf/orange-americano.webp";
 
 const icedCoffee = [
   {

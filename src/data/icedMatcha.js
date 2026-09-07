@@ -1,10 +1,10 @@
-import icedMatchaLatte from "../assets/images/iced-caffee/iced-matcha-latte.png";
-import icedMangoMatcha from "../assets/images/iced-caffee/iced-mango-matcha.png";
-import icedCaramelMatcha from "../assets/images/iced-caffee/iced-caramel-matcha.png";
-import icedSpirulinaLatte from "../assets/images/iced-caffee/iced-spirulina-latte.png";
-import icedMangoSpirulina from "../assets/images/iced-caffee/iced-mango-spirulina.png";
-import icedCaramelSpirulina from "../assets/images/iced-caffee/iced-caramel-spirulina.png";
-import icedStrawberrySpirulina from "../assets/images/iced-caffee/iced-strawberry-spirulina.png";
+import icedMatchaLatte from "../assets/images-optimized/iced-caffee/iced-matcha-latte.webp";
+import icedMangoMatcha from "../assets/images-optimized/iced-caffee/iced-mango-matcha.webp";
+import icedCaramelMatcha from "../assets/images-optimized/iced-caffee/iced-caramel-matcha.webp";
+import icedSpirulinaLatte from "../assets/images-optimized/iced-caffee/iced-spirulina-latte.webp";
+import icedMangoSpirulina from "../assets/images-optimized/iced-caffee/iced-mango-spirulina.webp";
+import icedCaramelSpirulina from "../assets/images-optimized/iced-caffee/iced-caramel-spirulina.webp";
+import icedStrawberrySpirulina from "../assets/images-optimized/iced-caffee/iced-strawberry-spirulina.webp";
 
 const icedMatcha = [
   {

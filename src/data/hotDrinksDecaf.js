@@ -1,10 +1,10 @@
-import hotChocolate from "../assets/images/hot-caffe/hot-chocolate.png";
-import pinkMallow from "../assets/images/hot-caffe/pink-mallow.png";
-import matchaLatte from "../assets/images/hot-caffe/matcha-latte.png";
-import spirulinaLatte from "../assets/images/hot-caffe/spirulina-latte.png";
-import pistachioSaffron from "../assets/images/hot-caffe/pistachio-saffron.png";
-import masalaTea from "../assets/images/hot-caffe/masala-tea.png";
-import karakTea from "../assets/images/hot-caffe/karak-tea.png";
+import hotChocolate from "../assets/images-optimized/hot-caffe/hot-chocolate.webp";
+import pinkMallow from "../assets/images-optimized/hot-caffe/pink-mallow.webp";
+import matchaLatte from "../assets/images-optimized/hot-caffe/matcha-latte.webp";
+import spirulinaLatte from "../assets/images-optimized/hot-caffe/spirulina-latte.webp";
+import pistachioSaffron from "../assets/images-optimized/hot-caffe/pistachio-saffron.webp";
+import masalaTea from "../assets/images-optimized/hot-caffe/masala-tea.webp";
+import karakTea from "../assets/images-optimized/hot-caffe/karak-tea.webp";
 
 const hotDrinksDecaf = [
   {

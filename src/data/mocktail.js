@@ -1,12 +1,12 @@
-import aurora from "../assets/images/mocktail/aurora.png";
-import laleh from "../assets/images/mocktail/laleh.png";
-import kahroba from "../assets/images/mocktail/kahroba.png";
-import shine from "../assets/images/mocktail/shine.png";
-import red from "../assets/images/mocktail/red.png";
-import sky from "../assets/images/mocktail/sky.png";
-import greenNight from "../assets/images/mocktail/green-night.png";
-import lemonade from "../assets/images/mocktail/lemonade.png";
-import mojito from "../assets/images/mocktail/mojito.png";
+import aurora from "../assets/images-optimized/mocktail/aurora.webp";
+import laleh from "../assets/images-optimized/mocktail/laleh.webp";
+import kahroba from "../assets/images-optimized/mocktail/kahroba.webp";
+import shine from "../assets/images-optimized/mocktail/shine.webp";
+import red from "../assets/images-optimized/mocktail/red.webp";
+import sky from "../assets/images-optimized/mocktail/sky.webp";
+import greenNight from "../assets/images-optimized/mocktail/green-night.webp";
+import lemonade from "../assets/images-optimized/mocktail/lemonade.webp";
+import mojito from "../assets/images-optimized/mocktail/mojito.webp";
 
 const mocktails = [
   {

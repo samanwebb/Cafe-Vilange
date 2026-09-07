@@ -1,8 +1,8 @@
-import strawberry from "../assets/images/smoothie/strawberry.png";
-import tropical from "../assets/images/smoothie/tropical.png";
-import greenSmoothie from "../assets/images/smoothie/green-smoothie.png";
-import berrySmoothie from "../assets/images/smoothie/berry-smoothie.png";
-import vilangeSmoothie from "../assets/images/smoothie/vilange-smoothie.png";
+import strawberry from "../assets/images-optimized/smoothie/strawberry.webp";
+import tropical from "../assets/images-optimized/smoothie/tropical.webp";
+import greenSmoothie from "../assets/images-optimized/smoothie/green-smoothie.webp";
+import berrySmoothie from "../assets/images-optimized/smoothie/berry-smoothie.webp";
+import vilangeSmoothie from "../assets/images-optimized/smoothie/vilange-smoothie.webp";
 
 const smoothies = [
   {

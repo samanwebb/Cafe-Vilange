@@ -1,11 +1,11 @@
-import peanut from "../assets/images/shake/peanut.png";
-import lotus from "../assets/images/shake/lotus.png";
-import nutella from "../assets/images/shake/nutella.png";
-import bananaChocolate from "../assets/images/shake/banana-chocolate.png";
-import oreo from "../assets/images/shake/oreo.png";
-import tropical from "../assets/images/shake/tropical.png";
-import strawberry from "../assets/images/shake/strawberry.png";
-import vilange from "../assets/images/shake/vilange.png";
+import peanut from "../assets/images-optimized/shake/peanut.webp";
+import lotus from "../assets/images-optimized/shake/lotus.webp";
+import nutella from "../assets/images-optimized/shake/nutella.webp";
+import bananaChocolate from "../assets/images-optimized/shake/banana-chocolate.webp";
+import oreo from "../assets/images-optimized/shake/oreo.webp";
+import tropical from "../assets/images-optimized/shake/tropical.webp";
+import strawberry from "../assets/images-optimized/shake/strawberry.webp";
+import vilange from "../assets/images-optimized/shake/vilange.webp";
 
 const shakes = [
   {

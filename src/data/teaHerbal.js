@@ -1,10 +1,10 @@
-import looseTea from "../assets/images/tea-herbal/loose-tea.png";
-import saffronTea from "../assets/images/tea-herbal/saffron-tea.png";
-import cardamomCinnamonTea from "../assets/images/tea-herbal/cardamom-cinnamon-tea.png";
-import moroccanTea from "../assets/images/tea-herbal/moroccan-tea.png";
-import lightHerbalTea from "../assets/images/tea-herbal/light-herbal-tea.png";
-import chillHerbalTea from "../assets/images/tea-herbal/chill-herbal-tea.png";
-import vilangeHerbalTea from "../assets/images/tea-herbal/vilange-herbal-tea.png";
+import looseTea from "../assets/images-optimized/tea-herbal/loose-tea.webp";
+import saffronTea from "../assets/images-optimized/tea-herbal/saffron-tea.webp";
+import cardamomCinnamonTea from "../assets/images-optimized/tea-herbal/cardamom-cinnamon-tea.webp";
+import moroccanTea from "../assets/images-optimized/tea-herbal/moroccan-tea.webp";
+import lightHerbalTea from "../assets/images-optimized/tea-herbal/light-herbal-tea.webp";
+import chillHerbalTea from "../assets/images-optimized/tea-herbal/chill-herbal-tea.webp";
+import vilangeHerbalTea from "../assets/images-optimized/tea-herbal/vilange-herbal-tea.webp";
 
 const teaHerbal = [
   {

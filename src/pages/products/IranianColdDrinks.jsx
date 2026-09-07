@@ -17,7 +17,7 @@ export default function IranianColdDrinks() {
         <div className={styles.grid}>
           {iranianColdDrinks.map((item) => (
             <div className={styles.card} key={item.id}>
-              <img src={item.image} alt={item.name} />
+              <img src={item.image} alt={item.name} loading="lazy" decoding="async" />
 
               <ProductCard item={item} category="iranian-cold-drinks" />
             </div>

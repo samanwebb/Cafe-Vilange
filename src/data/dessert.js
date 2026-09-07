@@ -1,11 +1,11 @@
-import wetChocolateCake from "../assets/images/dessert/wet-chocolate-cake.png";
-import doubleChocolateCake from "../assets/images/dessert/double-chocolate-cake.png";
-import lotusCake from "../assets/images/dessert/lotus-cake.png";
-import snickersCake from "../assets/images/dessert/snickers-cake.png";
-import honeyMilkCake from "../assets/images/dessert/honey-milk-cake.png";
-import oreoCheesecake from "../assets/images/dessert/oreo-cheesecake.png";
-import nutellaCheesecake from "../assets/images/dessert/nutella-cheesecake.png";
-import sanSebastianCheesecake from "../assets/images/dessert/san-sebastian-cheesecake.png";
+import wetChocolateCake from "../assets/images-optimized/dessert/wet-chocolate-cake.webp";
+import doubleChocolateCake from "../assets/images-optimized/dessert/double-chocolate-cake.webp";
+import lotusCake from "../assets/images-optimized/dessert/lotus-cake.webp";
+import snickersCake from "../assets/images-optimized/dessert/snickers-cake.webp";
+import honeyMilkCake from "../assets/images-optimized/dessert/honey-milk-cake.webp";
+import oreoCheesecake from "../assets/images-optimized/dessert/oreo-cheesecake.webp";
+import nutellaCheesecake from "../assets/images-optimized/dessert/nutella-cheesecake.webp";
+import sanSebastianCheesecake from "../assets/images-optimized/dessert/san-sebastian-cheesecake.webp";
 
 const desserts = [
   {

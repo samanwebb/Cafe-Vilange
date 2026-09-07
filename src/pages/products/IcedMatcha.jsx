@@ -17,7 +17,7 @@ export default function IcedMatcha() {
         <div className={styles.grid}>
           {icedMatcha.map((item) => (
             <div className={styles.card} key={item.id}>
-              <img src={item.image} alt={item.name} />
+              <img src={item.image} alt={item.name} loading="lazy" decoding="async" />
 
               <ProductCard item={item} category="iced-matcha" />
             </div>

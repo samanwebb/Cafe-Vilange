@@ -1,12 +1,12 @@
-import espressoRobusta from "../assets/images/hot-caffee-caf/espresso-robusta.png";
-import espressoSpecial from "../assets/images/hot-caffee-caf/special-espresso.png";
-import espressoConPanna from "../assets/images/hot-caffee-caf/espresso-con-panna.png";
-import cappuccino from "../assets/images/hot-caffee-caf/cappuccino.png";
-import latte from "../assets/images/hot-caffee-caf/latte.png";
-import hazelnutLatte from "../assets/images/hot-caffee-caf/hazelnut-latte.png";
-import mocha from "../assets/images/hot-caffee-caf/mocha.png";
-import caramelMacchiato from "../assets/images/hot-caffee-caf/caramel-macchiato.png";
-import americano from "../assets/images/hot-caffee-caf/americano.png";
+import espressoRobusta from "../assets/images-optimized/hot-caffee-caf/espresso-robusta.webp";
+import espressoSpecial from "../assets/images-optimized/hot-caffee-caf/special-espresso.webp";
+import espressoConPanna from "../assets/images-optimized/hot-caffee-caf/espresso-con-panna.webp";
+import cappuccino from "../assets/images-optimized/hot-caffee-caf/cappuccino.webp";
+import latte from "../assets/images-optimized/hot-caffee-caf/latte.webp";
+import hazelnutLatte from "../assets/images-optimized/hot-caffee-caf/hazelnut-latte.webp";
+import mocha from "../assets/images-optimized/hot-caffee-caf/mocha.webp";
+import caramelMacchiato from "../assets/images-optimized/hot-caffee-caf/caramel-macchiato.webp";
+import americano from "../assets/images-optimized/hot-caffee-caf/americano.webp";
 
 const hotCoffee = [
   {

@@ -1,6 +1,6 @@
-import espressoFrappuccino from "../assets/images/frappe/espresso-frappuccino.png";
-import mochaFrappuccino from "../assets/images/frappe/mocha-frappuccino.png";
-import caramelFrappuccino from "../assets/images/frappe/caramel-frappuccino.png";
+import espressoFrappuccino from "../assets/images-optimized/frappe/espresso-frappuccino.webp";
+import mochaFrappuccino from "../assets/images-optimized/frappe/mocha-frappuccino.webp";
+import caramelFrappuccino from "../assets/images-optimized/frappe/caramel-frappuccino.webp";
 
 const frappes = [
   {

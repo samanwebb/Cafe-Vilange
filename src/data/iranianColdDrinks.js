@@ -1,7 +1,7 @@
-import linora from "../assets/images/iranian-cold-drinks/linora.png";
-import aramesh from "../assets/images/iranian-cold-drinks/aramesh.png";
-import sahel from "../assets/images/iranian-cold-drinks/sahel.png";
-import vilange from "../assets/images/iranian-cold-drinks/vilange.png";
+import linora from "../assets/images-optimized/iranian-cold-drinks/linora.webp";
+import aramesh from "../assets/images-optimized/iranian-cold-drinks/aramesh.webp";
+import sahel from "../assets/images-optimized/iranian-cold-drinks/sahel.webp";
+import vilange from "../assets/images-optimized/iranian-cold-drinks/vilange.webp";
 
 const iranianColdDrinks = [
   {
